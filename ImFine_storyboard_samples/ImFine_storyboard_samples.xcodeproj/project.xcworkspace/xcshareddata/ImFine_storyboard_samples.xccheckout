@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>40C4A768-BDA0-41A6-B4FA-C0709E0FEF2A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ImFine_storyboard_samples</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6175A383C2D81DFF17D11D73CCEDBADE48DFC815</key>
+		<string>https://github.com/TaesunAndNunas/iOS</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOS-storyboard/HuDi_ios/ImFine_storyboard_samples/ImFine_storyboard_samples.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6175A383C2D81DFF17D11D73CCEDBADE48DFC815</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/TaesunAndNunas/iOS</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6175A383C2D81DFF17D11D73CCEDBADE48DFC815</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6175A383C2D81DFF17D11D73CCEDBADE48DFC815</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Project</string>
+		</dict>
+	</array>
+</dict>
+</plist>
