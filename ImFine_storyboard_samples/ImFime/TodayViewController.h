@@ -1,8 +1,8 @@
 //
 //  TodayViewController.h
-//  MainWidget
+//  ImFime
 //
-//  Created by NEXT-19 on 2015. 4. 6..
+//  Created by 박태준 on 2015. 4. 20..
 //  Copyright (c) 2015년 yunseo. All rights reserved.
 //
 
