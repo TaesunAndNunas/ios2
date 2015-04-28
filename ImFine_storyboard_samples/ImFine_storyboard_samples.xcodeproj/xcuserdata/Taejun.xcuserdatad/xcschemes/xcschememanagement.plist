@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ImFime.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>ImFine_storyboard_samples.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -28,6 +33,11 @@
 			<true/>
 		</dict>
 		<key>6F47E9A91ACE4ECC0030DFA8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DC2A55771AE43000002F7D0B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

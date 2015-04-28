@@ -160,6 +160,7 @@
                                        :userBirth
                                        :_userSex];
         }
+    // else if 구현 및 생년월일 예외조건 구현
 }
 @end
 

@@ -10,24 +10,62 @@
 
 @interface MainViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *MainLabel1;
-@property (weak, nonatomic) IBOutlet UILabel *MainLabel2;
-@property (weak, nonatomic) IBOutlet UILabel *MainLabel3;
-@property (weak, nonatomic) IBOutlet UILabel *MainLabel4;
-
 @end
 
 @implementation MainViewController
 
+static NSInteger feedingCount = 0;
+static NSInteger pooCount = 0;
+static NSInteger sleepingCount = 0;
+static NSInteger medicineCount = 0;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+//    _feedingArr  = [[NSMutableArray alloc]init];
+//    _pooArr      = [[NSMutableArray alloc]init];
+//    _sleepingArr = [[NSMutableArray alloc]init];
+//    _medicineArr = [[NSMutableArray alloc]init];
+    _totalArr    = [[NSMutableArray alloc]init];
+    _mainTableView.dataSource = self;
+    [_mainTableView reloadData];
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [_totalArr count];
+}
+
+- (MainTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *cIdentifier = @"cell";
+    
+    MainTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cIdentifier];
+    
+    if(cell ==nil)
+    {
+        cell = [[MainTableViewCell alloc]
+                 initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cIdentifier];
+    }
+    
+    cell.textLabel.text = @"test";
+    
+    return cell;
+}
+
+    
+//- (void)removeAllObjects {
+//    12:00 am
+//}
 
 /*
 #pragma mark - Navigation
@@ -38,21 +76,133 @@
     // Pass the selected object to the new view controller.
 }
 */
-- (IBAction)MainButton1:(id)sender {
+
+#pragma mark - Getter/Setter for count
+
++ (NSInteger)feedingCount{
+    return feedingCount;
+}
+
++ (void) setFeedingCount:(NSInteger)count{
+    feedingCount = count;
+}
+
++ (NSInteger) pooCount{
+    return pooCount;
+}
+
++ (void) setPooCount:(NSInteger)count{
+    pooCount = count;
+}
+
++ (NSInteger) sleepingCount{
+    return sleepingCount;
+}
+
++ (void) setSleepingCount:(NSInteger)count{
+    sleepingCount = count;
+}
+
++ (NSInteger) medicineCount{
+    return medicineCount;
+}
+
++ (void) setMedicineCount:(NSInteger)count{
+    medicineCount = count;
+}
+
+// action time in array
+// action count == last array idx
+// or dic
+// action time + count == MutableString appendFormat
+
+#pragma mark - Main View Button Action
+
+- (IBAction)feedingButton:(id)sender {
+    
+    feedingCount++;
+
     NSDate* now = [NSDate date];
     NSDateFormatter* hourAndMin = [[NSDateFormatter alloc]init];
-    
     [hourAndMin setDateFormat:@"HH:mm"];
-    
     NSString* actionTime = [hourAndMin stringFromDate:now];
-    _MainLabel1.text = actionTime;
-
     
+    NSMutableString* textForLabel = [[NSMutableString alloc]initWithCapacity:10];
+    [textForLabel appendFormat:@"%ld회 / ", (long)feedingCount];
+    [textForLabel appendFormat:@"%@", actionTime];
+    _feedingLabel.text = textForLabel;
+    
+    NSString* textSendToArray = [[NSString alloc]initWithFormat:@"feeding/%@",actionTime];
+    [_totalArr addObject:textSendToArray];
+    [_mainTableView reloadData];
+    NSLog(@"%@ / %ld",textSendToArray, (long)feedingCount);
 }
-- (IBAction)MainButton2:(id)sender {
+
+- (IBAction)pooButton:(id)sender {
+    
+    pooCount++;
+
+    NSDate* now = [NSDate date];
+    NSDateFormatter* hourAndMin = [[NSDateFormatter alloc]init];
+    [hourAndMin setDateFormat:@"HH:mm"];
+    NSString* actionTime = [hourAndMin stringFromDate:now];
+    
+    NSMutableString* textForLabel = [[NSMutableString alloc]initWithCapacity:10];
+    [textForLabel appendFormat:@"%ld회 / ", (long)pooCount];
+    [textForLabel appendFormat:@"%@", actionTime];
+    _pooLabel.text = textForLabel;
+    
+    NSString* textSendToArray = [[NSString alloc]initWithFormat:@"feeding/%@",actionTime];
+    [_totalArr addObject:textSendToArray];
+    [_mainTableView reloadData];
+    NSLog(@"%@ / %ld",textSendToArray, (long)pooCount);
 }
-- (IBAction)MainButton3:(id)sender {
+
+- (IBAction)sleepingButton:(id)sender {
+    
+    
+    sleepingCount++;
+
+    NSDate* now = [NSDate date];
+    NSDateFormatter* hourAndMin = [[NSDateFormatter alloc]init];
+    [hourAndMin setDateFormat:@"HH:mm"];
+    NSString* actionTime = [hourAndMin stringFromDate:now];
+    
+    NSMutableString* textForLabel = [[NSMutableString alloc]initWithCapacity:10];
+    [textForLabel appendFormat:@"%ld회 / ", (long)sleepingCount];
+    [textForLabel appendFormat:@"%@", actionTime];
+    _sleepingLabel.text = textForLabel;
+    
+    NSString* textSendToArray = [[NSString alloc]initWithFormat:@"feeding/%@",actionTime];
+    [_totalArr addObject:textSendToArray];
+    [_mainTableView reloadData];
+    NSLog(@"%@ / %ld",textSendToArray, (long)sleepingCount);
 }
+
+- (IBAction)medicineButton:(id)sender {
+    
+    medicineCount++;
+
+    NSDate* now = [NSDate date];
+    NSDateFormatter* hourAndMin = [[NSDateFormatter alloc]init];
+    [hourAndMin setDateFormat:@"HH:mm"];
+    NSString* actionTime = [hourAndMin stringFromDate:now];
+    
+    NSMutableString* textForLabel = [[NSMutableString alloc]initWithCapacity:10];
+    [textForLabel appendFormat:@"%ld회 / ", (long)medicineCount];
+    [textForLabel appendFormat:@"%@", actionTime];
+    _medicineLabel.text = textForLabel;
+    
+    NSString* textSendToArray = [[NSString alloc]initWithFormat:@"feeding/%@",actionTime];
+    [_totalArr addObject:textSendToArray];
+    [_mainTableView reloadData];
+    NSLog(@"%@ / %ld",textSendToArray, (long)medicineCount);
+}
+
+
+
+
+
 
 @end
 

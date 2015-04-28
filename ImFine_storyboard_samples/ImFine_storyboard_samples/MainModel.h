@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MainViewController.h"
+#import "MainTableViewCell.h"
 
 @interface MainModel : NSObject
 

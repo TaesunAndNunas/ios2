@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MainViewController.h"
+#import "MainModel.h"
 
 @interface MainTableViewCell : UITableViewCell
 
