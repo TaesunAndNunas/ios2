@@ -11,5 +11,4 @@
 #import "MainTableViewCell.h"
 
 @interface MainModel : NSObject
-
 @end

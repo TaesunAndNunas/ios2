@@ -17,8 +17,6 @@
 		18792A4A1AD3DBA500ACFD3A /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18792A491AD3DBA500ACFD3A /* LoginModel.m */; };
 		18792A4D1AD4801800ACFD3A /* RegisterIDModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18792A4C1AD4801800ACFD3A /* RegisterIDModel.m */; };
 		6F47E9971ACE4ECC0030DFA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F47E9961ACE4ECC0030DFA8 /* main.m */; };
-		6F47E99A1ACE4ECC0030DFA8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F47E9991ACE4ECC0030DFA8 /* AppDelegate.m */; };
-		6F47E99D1ACE4ECC0030DFA8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F47E99C1ACE4ECC0030DFA8 /* ViewController.m */; };
 		6F47E9A01ACE4ECC0030DFA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F47E99E1ACE4ECC0030DFA8 /* Main.storyboard */; };
 		6F47E9A21ACE4ECC0030DFA8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F47E9A11ACE4ECC0030DFA8 /* Images.xcassets */; };
 		6F47E9A51ACE4ECC0030DFA8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F47E9A31ACE4ECC0030DFA8 /* LaunchScreen.xib */; };
@@ -27,6 +25,11 @@
 		DC2A557F1AE43000002F7D0B /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2A557E1AE43000002F7D0B /* TodayViewController.m */; };
 		DC2A55811AE43000002F7D0B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC2A55801AE43000002F7D0B /* MainInterface.storyboard */; };
 		DC2A55841AE43000002F7D0B /* ImFime.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DC2A55781AE43000002F7D0B /* ImFime.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DC349A001AF0B291007C1DE8 /* diaper2_white.png in Resources */ = {isa = PBXBuildFile; fileRef = DC3499FC1AF0B291007C1DE8 /* diaper2_white.png */; };
+		DC349A011AF0B291007C1DE8 /* medicine2_white.png in Resources */ = {isa = PBXBuildFile; fileRef = DC3499FD1AF0B291007C1DE8 /* medicine2_white.png */; };
+		DC349A021AF0B291007C1DE8 /* milk2_white.png in Resources */ = {isa = PBXBuildFile; fileRef = DC3499FE1AF0B291007C1DE8 /* milk2_white.png */; };
+		DC349A031AF0B291007C1DE8 /* sleep2_white.png in Resources */ = {isa = PBXBuildFile; fileRef = DC3499FF1AF0B291007C1DE8 /* sleep2_white.png */; };
+		DC349A071AF0B393007C1DE8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC349A061AF0B393007C1DE8 /* AppDelegate.m */; };
 		DC62825F1AEBFFC600906030 /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC62825E1AEBFFC600906030 /* MainModel.m */; };
 		DC8FAA0E1AE1AAF600B8EE7F /* feeding.png in Resources */ = {isa = PBXBuildFile; fileRef = DC8FAA0A1AE1AAF600B8EE7F /* feeding.png */; };
 		DC8FAA0F1AE1AAF600B8EE7F /* medicine.png in Resources */ = {isa = PBXBuildFile; fileRef = DC8FAA0B1AE1AAF600B8EE7F /* medicine.png */; };
@@ -90,10 +93,6 @@
 		6F47E9911ACE4ECC0030DFA8 /* ImFine_storyboard_samples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImFine_storyboard_samples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F47E9951ACE4ECC0030DFA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F47E9961ACE4ECC0030DFA8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6F47E9981ACE4ECC0030DFA8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		6F47E9991ACE4ECC0030DFA8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6F47E99B1ACE4ECC0030DFA8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6F47E99C1ACE4ECC0030DFA8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6F47E99F1ACE4ECC0030DFA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6F47E9A11ACE4ECC0030DFA8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6F47E9A41ACE4ECC0030DFA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -105,6 +104,12 @@
 		DC2A557D1AE43000002F7D0B /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
 		DC2A557E1AE43000002F7D0B /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
 		DC2A55801AE43000002F7D0B /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		DC3499FC1AF0B291007C1DE8 /* diaper2_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diaper2_white.png; sourceTree = "<group>"; };
+		DC3499FD1AF0B291007C1DE8 /* medicine2_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = medicine2_white.png; sourceTree = "<group>"; };
+		DC3499FE1AF0B291007C1DE8 /* milk2_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = milk2_white.png; sourceTree = "<group>"; };
+		DC3499FF1AF0B291007C1DE8 /* sleep2_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sleep2_white.png; sourceTree = "<group>"; };
+		DC349A051AF0B393007C1DE8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DC349A061AF0B393007C1DE8 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DC62825D1AEBFFC600906030 /* MainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainModel.h; sourceTree = "<group>"; };
 		DC62825E1AEBFFC600906030 /* MainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainModel.m; sourceTree = "<group>"; };
 		DC8FAA0A1AE1AAF600B8EE7F /* feeding.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feeding.png; sourceTree = "<group>"; };
@@ -209,24 +214,15 @@
 		6F47E9931ACE4ECC0030DFA8 /* ImFine_storyboard_samples */ = {
 			isa = PBXGroup;
 			children = (
-				18792A441AD3052500ACFD3A /* main */,
 				18792A431AD3052300ACFD3A /* login */,
 				18792A421AD3052100ACFD3A /* register */,
-				6F47E9981ACE4ECC0030DFA8 /* AppDelegate.h */,
-				6F47E9991ACE4ECC0030DFA8 /* AppDelegate.m */,
-				6F47E99B1ACE4ECC0030DFA8 /* ViewController.h */,
-				6F47E99C1ACE4ECC0030DFA8 /* ViewController.m */,
-				18792A291AD2B3C800ACFD3A /* FeedingViewController.h */,
-				18792A2A1AD2B3C800ACFD3A /* FeedingViewController.m */,
-				DC8FAA141AE1D39F00B8EE7F /* PooViewController.h */,
-				DC8FAA151AE1D39F00B8EE7F /* PooViewController.m */,
-				18792A2C1AD2B40B00ACFD3A /* SleepViewController.h */,
-				18792A2D1AD2B40B00ACFD3A /* SleepViewController.m */,
-				18792A2F1AD2B42000ACFD3A /* MedicineViewController.h */,
-				18792A301AD2B42000ACFD3A /* MedicineViewController.m */,
+				18792A441AD3052500ACFD3A /* main */,
+				DC349A041AF0B2C9007C1DE8 /* mainDetail */,
 				6F47E9A11ACE4ECC0030DFA8 /* Images.xcassets */,
 				6F47E99E1ACE4ECC0030DFA8 /* Main.storyboard */,
 				6F47E9A31ACE4ECC0030DFA8 /* LaunchScreen.xib */,
+				DC349A051AF0B393007C1DE8 /* AppDelegate.h */,
+				DC349A061AF0B393007C1DE8 /* AppDelegate.m */,
 				6F47E9941ACE4ECC0030DFA8 /* Supporting Files */,
 			);
 			path = ImFine_storyboard_samples;
@@ -278,9 +274,28 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DC349A041AF0B2C9007C1DE8 /* mainDetail */ = {
+			isa = PBXGroup;
+			children = (
+				18792A291AD2B3C800ACFD3A /* FeedingViewController.h */,
+				18792A2A1AD2B3C800ACFD3A /* FeedingViewController.m */,
+				DC8FAA141AE1D39F00B8EE7F /* PooViewController.h */,
+				DC8FAA151AE1D39F00B8EE7F /* PooViewController.m */,
+				18792A2C1AD2B40B00ACFD3A /* SleepViewController.h */,
+				18792A2D1AD2B40B00ACFD3A /* SleepViewController.m */,
+				18792A2F1AD2B42000ACFD3A /* MedicineViewController.h */,
+				18792A301AD2B42000ACFD3A /* MedicineViewController.m */,
+			);
+			name = mainDetail;
+			sourceTree = "<group>";
+		};
 		DC8FAA091AE1AA9500B8EE7F /* image */ = {
 			isa = PBXGroup;
 			children = (
+				DC3499FC1AF0B291007C1DE8 /* diaper2_white.png */,
+				DC3499FD1AF0B291007C1DE8 /* medicine2_white.png */,
+				DC3499FE1AF0B291007C1DE8 /* milk2_white.png */,
+				DC3499FF1AF0B291007C1DE8 /* sleep2_white.png */,
 				DC8FAA121AE1AB8800B8EE7F /* camera.png */,
 				DC8FAA0A1AE1AAF600B8EE7F /* feeding.png */,
 				DC8FAA0B1AE1AAF600B8EE7F /* medicine.png */,
@@ -394,8 +409,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC8FAA111AE1AAF600B8EE7F /* sleep.png in Resources */,
+				DC349A021AF0B291007C1DE8 /* milk2_white.png in Resources */,
+				DC349A001AF0B291007C1DE8 /* diaper2_white.png in Resources */,
+				DC349A011AF0B291007C1DE8 /* medicine2_white.png in Resources */,
 				DC8FAA101AE1AAF600B8EE7F /* poo.png in Resources */,
 				DC8FAA0E1AE1AAF600B8EE7F /* feeding.png in Resources */,
+				DC349A031AF0B291007C1DE8 /* sleep2_white.png in Resources */,
 				6F47E9A01ACE4ECC0030DFA8 /* Main.storyboard in Resources */,
 				6F47E9A51ACE4ECC0030DFA8 /* LaunchScreen.xib in Resources */,
 				DC8FAA0F1AE1AAF600B8EE7F /* medicine.png in Resources */,
@@ -431,11 +450,10 @@
 				18792A3A1AD2B56400ACFD3A /* RegisterIDViewController.m in Sources */,
 				18792A311AD2B42000ACFD3A /* MedicineViewController.m in Sources */,
 				18792A4D1AD4801800ACFD3A /* RegisterIDModel.m in Sources */,
-				6F47E99D1ACE4ECC0030DFA8 /* ViewController.m in Sources */,
 				DC62825F1AEBFFC600906030 /* MainModel.m in Sources */,
 				18792A4A1AD3DBA500ACFD3A /* LoginModel.m in Sources */,
+				DC349A071AF0B393007C1DE8 /* AppDelegate.m in Sources */,
 				DC8FAA161AE1D39F00B8EE7F /* PooViewController.m in Sources */,
-				6F47E99A1ACE4ECC0030DFA8 /* AppDelegate.m in Sources */,
 				18792A371AD2B55300ACFD3A /* LoginViewController.m in Sources */,
 				6F47E9971ACE4ECC0030DFA8 /* main.m in Sources */,
 				18792A281AD2AB5C00ACFD3A /* MainViewController.m in Sources */,

@@ -29,7 +29,24 @@ static NSInteger medicineCount = 0;
     _totalArr    = [[NSMutableArray alloc]init];
     _mainTableView.dataSource = self;
     [_mainTableView reloadData];
+    [self downloadUsingSync];
+}
 
+- (void) downloadUsingSync{
+    //NSURL *url = [NSURL URLWithString:(NSString 190-0ㄴㅈ`*) relativeToURL:<#(NSURL *)#>];
+    
+    NSString *urlStr = [NSString stringWithFormat:@"http://127.0.0.1:9999/cardList"];
+    NSLog(@"URL=%@",urlStr);
+    NSURL *url = [NSURL URLWithString:urlStr];
+    
+    //Request
+    NSURLRequest * urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://127.0.0.1/cardList"]];
+    NSURLRequest * request = [NSURLRequest requestWithURL:url];
+    
+    //Response
+    NSURLResponse *resp = nil;
+    NSError *error = nil;
+    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&resp error:&error];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,14 +68,13 @@ static NSInteger medicineCount = 0;
     
     MainTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cIdentifier];
     
-    if(cell ==nil)
-    {
+    if(cell ==nil){
         cell = [[MainTableViewCell alloc]
                  initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cIdentifier];
     }
     
-    cell.textLabel.text = @"test";
-    
+    cell.textLabel.text = [_totalArr objectAtIndex:_totalArr.count -1 -indexPath.row];
+
     return cell;
 }
 
@@ -119,7 +135,7 @@ static NSInteger medicineCount = 0;
 #pragma mark - Main View Button Action
 
 - (IBAction)feedingButton:(id)sender {
-    
+
     feedingCount++;
 
     NSDate* now = [NSDate date];
@@ -132,7 +148,7 @@ static NSInteger medicineCount = 0;
     [textForLabel appendFormat:@"%@", actionTime];
     _feedingLabel.text = textForLabel;
     
-    NSString* textSendToArray = [[NSString alloc]initWithFormat:@"feeding/%@",actionTime];
+    NSString* textSendToArray = [[NSString alloc]initWithFormat:@"feeding / %@",actionTime];
     [_totalArr addObject:textSendToArray];
     [_mainTableView reloadData];
     NSLog(@"%@ / %ld",textSendToArray, (long)feedingCount);
@@ -152,14 +168,13 @@ static NSInteger medicineCount = 0;
     [textForLabel appendFormat:@"%@", actionTime];
     _pooLabel.text = textForLabel;
     
-    NSString* textSendToArray = [[NSString alloc]initWithFormat:@"feeding/%@",actionTime];
+    NSString* textSendToArray = [[NSString alloc]initWithFormat:@"poo / %@",actionTime];
     [_totalArr addObject:textSendToArray];
     [_mainTableView reloadData];
     NSLog(@"%@ / %ld",textSendToArray, (long)pooCount);
 }
 
 - (IBAction)sleepingButton:(id)sender {
-    
     
     sleepingCount++;
 
@@ -173,7 +188,7 @@ static NSInteger medicineCount = 0;
     [textForLabel appendFormat:@"%@", actionTime];
     _sleepingLabel.text = textForLabel;
     
-    NSString* textSendToArray = [[NSString alloc]initWithFormat:@"feeding/%@",actionTime];
+    NSString* textSendToArray = [[NSString alloc]initWithFormat:@"sleeping / %@",actionTime];
     [_totalArr addObject:textSendToArray];
     [_mainTableView reloadData];
     NSLog(@"%@ / %ld",textSendToArray, (long)sleepingCount);
@@ -193,15 +208,11 @@ static NSInteger medicineCount = 0;
     [textForLabel appendFormat:@"%@", actionTime];
     _medicineLabel.text = textForLabel;
     
-    NSString* textSendToArray = [[NSString alloc]initWithFormat:@"feeding/%@",actionTime];
+    NSString* textSendToArray = [[NSString alloc]initWithFormat:@"medicine / %@",actionTime];
     [_totalArr addObject:textSendToArray];
     [_mainTableView reloadData];
     NSLog(@"%@ / %ld",textSendToArray, (long)medicineCount);
 }
-
-
-
-
 
 
 @end

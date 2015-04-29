@@ -23,11 +23,12 @@
 @property (strong, nonatomic) IBOutlet UILabel *pooLabel;
 @property (strong, nonatomic) IBOutlet UILabel *sleepingLabel;
 @property (strong, nonatomic) IBOutlet UILabel *medicineLabel;
-//
+
 //@property (strong, nonatomic) NSMutableArray* feedingArr;
 //@property (strong, nonatomic) NSMutableArray* pooArr;
 //@property (strong, nonatomic) NSMutableArray* sleepingArr;
 //@property (strong, nonatomic) NSMutableArray* medicineArr;
+
 @property (strong, nonatomic) NSMutableArray* totalArr;
 
 + (NSInteger) feedingCount;
