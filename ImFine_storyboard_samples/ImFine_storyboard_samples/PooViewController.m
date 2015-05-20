@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //디폴트시간
+    //세그멘티드
+    //사진처리
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,5 +37,17 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)cancleButton:(id)sender {
+
+}
+
+- (IBAction)saveButton:(id)sender {
+    
+}
+
+- (IBAction)pooPictureButton:(id)sender {
+    
+}
 
 @end

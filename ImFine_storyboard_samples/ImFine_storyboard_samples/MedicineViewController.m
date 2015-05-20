@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //디폴트시간처리
+    //체크박스 버튼 처리
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,4 +37,21 @@
 }
 */
 
+- (IBAction)medicineFeverButton:(id)sender {
+}
+
+- (IBAction)medicineCoughButton:(id)sender {
+}
+
+- (IBAction)medicineRunnyNoseButton:(id)sender {
+}
+
+- (IBAction)medicineVomitButton:(id)sender {
+}
+
+- (IBAction)cancleButton:(id)sender {
+}
+
+- (IBAction)saveButton:(id)sender {
+}
 @end

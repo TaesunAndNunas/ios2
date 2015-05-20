@@ -10,4 +10,14 @@
 
 @interface FeedingViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITextField *feedingAmountBottleField;
+@property (strong, nonatomic) IBOutlet UITextField *feedingTimeHourField;
+@property (strong, nonatomic) IBOutlet UITextField *feddingTimeMinuteField;
+@property (strong, nonatomic) IBOutlet UITextField *feedingDirectDuration;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *feedingWaySegmented;
+@property (strong, nonatomic) IBOutlet UITextField *feedingMemoField;
+
+- (IBAction)cancleButton:(id)sender;
+- (IBAction)saveButton:(id)sender;
+
 @end

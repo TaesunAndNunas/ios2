@@ -27,6 +27,7 @@ static NSInteger medicineCount = 0;
 //    _sleepingArr = [[NSMutableArray alloc]init];
 //    _medicineArr = [[NSMutableArray alloc]init];
     _totalArr    = [[NSMutableArray alloc]init];
+    _mainTableView.delegate = self;
     _mainTableView.dataSource = self;
     [_mainTableView reloadData];
     [self downloadUsingSync];
@@ -73,9 +74,37 @@ static NSInteger medicineCount = 0;
                  initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cIdentifier];
     }
     
-    cell.textLabel.text = [_totalArr objectAtIndex:_totalArr.count -1 -indexPath.row];
-
+    if ([[_totalArr objectAtIndex:_totalArr.count -1 -indexPath.row] objectForKey:@"feeding"] != nil) {
+        cell.textLabel.text = [[_totalArr objectAtIndex:_totalArr.count -1 -indexPath.row] objectForKey:@"feeding"];
+    }
+    else if ([[_totalArr objectAtIndex:_totalArr.count -1 -indexPath.row] objectForKey:@"poo"] != nil) {
+        cell.textLabel.text = [[_totalArr objectAtIndex:_totalArr.count -1 -indexPath.row] objectForKey:@"poo"];
+    }
+    else if ([[_totalArr objectAtIndex:_totalArr.count -1 -indexPath.row] objectForKey:@"sleeping"] != nil) {
+        cell.textLabel.text = [[_totalArr objectAtIndex:_totalArr.count -1 -indexPath.row] objectForKey:@"sleeping"];
+    }
+    else if ([[_totalArr objectAtIndex:_totalArr.count -1 -indexPath.row] objectForKey:@"medicine"] != nil) {
+        cell.textLabel.text = [[_totalArr objectAtIndex:_totalArr.count -1 -indexPath.row] objectForKey:@"medicine"];
+    }
+    
+    NSLog(@"%@", _totalArr);
+    
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([[_totalArr objectAtIndex:_totalArr.count -1 -indexPath.row] objectForKey:@"feeding"] != nil) {
+        [self performSegueWithIdentifier:@"FeedingSegue" sender:self];
+    }
+    else if ([[_totalArr objectAtIndex:_totalArr.count -1 -indexPath.row] objectForKey:@"poo"] != nil) {
+        [self performSegueWithIdentifier:@"PooSegue" sender:self];
+    }
+    else if ([[_totalArr objectAtIndex:_totalArr.count -1 -indexPath.row] objectForKey:@"sleeping"] != nil) {
+        [self performSegueWithIdentifier:@"SleepSegue" sender:self];
+    }
+    else if ([[_totalArr objectAtIndex:_totalArr.count -1 -indexPath.row] objectForKey:@"medicine"] != nil) {
+        [self performSegueWithIdentifier:@"MedicineSegue" sender:self];
+    }
 }
 
     
@@ -95,7 +124,7 @@ static NSInteger medicineCount = 0;
 
 #pragma mark - Getter/Setter for count
 
-+ (NSInteger)feedingCount{
++ (NSInteger) feedingCount{
     return feedingCount;
 }
 
@@ -148,8 +177,10 @@ static NSInteger medicineCount = 0;
     [textForLabel appendFormat:@"%@", actionTime];
     _feedingLabel.text = textForLabel;
     
-    NSString* textSendToArray = [[NSString alloc]initWithFormat:@"feeding / %@",actionTime];
-    [_totalArr addObject:textSendToArray];
+    NSString* textSendToArray = [[NSString alloc]initWithFormat:@"[수유] %ld회 %@ ", (long)feedingCount, actionTime];
+    
+    NSDictionary *dic = @{@"feeding":textSendToArray};
+    [_totalArr addObject:dic];
     [_mainTableView reloadData];
     NSLog(@"%@ / %ld",textSendToArray, (long)feedingCount);
 }
@@ -168,8 +199,11 @@ static NSInteger medicineCount = 0;
     [textForLabel appendFormat:@"%@", actionTime];
     _pooLabel.text = textForLabel;
     
-    NSString* textSendToArray = [[NSString alloc]initWithFormat:@"poo / %@",actionTime];
-    [_totalArr addObject:textSendToArray];
+    NSString* textSendToArray = [[NSString alloc]initWithFormat:@"[배변] %ld회 %@ ", (long)pooCount ,actionTime];
+    
+    NSDictionary *dic = @{@"poo":textSendToArray};
+    [_totalArr addObject:dic];
+    
     [_mainTableView reloadData];
     NSLog(@"%@ / %ld",textSendToArray, (long)pooCount);
 }
@@ -188,8 +222,9 @@ static NSInteger medicineCount = 0;
     [textForLabel appendFormat:@"%@", actionTime];
     _sleepingLabel.text = textForLabel;
     
-    NSString* textSendToArray = [[NSString alloc]initWithFormat:@"sleeping / %@",actionTime];
-    [_totalArr addObject:textSendToArray];
+    NSString* textSendToArray = [[NSString alloc]initWithFormat:@"[수면] %ld회 %@ ", (long)sleepingCount, actionTime];
+    NSDictionary *dic = @{@"sleeping":textSendToArray};
+    [_totalArr addObject:dic];
     [_mainTableView reloadData];
     NSLog(@"%@ / %ld",textSendToArray, (long)sleepingCount);
 }
@@ -208,8 +243,9 @@ static NSInteger medicineCount = 0;
     [textForLabel appendFormat:@"%@", actionTime];
     _medicineLabel.text = textForLabel;
     
-    NSString* textSendToArray = [[NSString alloc]initWithFormat:@"medicine / %@",actionTime];
-    [_totalArr addObject:textSendToArray];
+    NSString* textSendToArray = [[NSString alloc]initWithFormat:@"[투약] %ld회 %@ ", (long)medicineCount, actionTime];
+    NSDictionary *dic = @{@"medicine":textSendToArray};
+    [_totalArr addObject:dic];
     [_mainTableView reloadData];
     NSLog(@"%@ / %ld",textSendToArray, (long)medicineCount);
 }

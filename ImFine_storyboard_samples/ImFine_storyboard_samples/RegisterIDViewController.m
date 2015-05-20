@@ -46,6 +46,7 @@
 // 아이디 유효판별 검사 메서드
 -(BOOL) checkUserIDValid: (NSString*) userID {
     
+    // 유효한 정규식인가???
     NSPredicate* validate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", @"[A-Za-z0-9]*$"];
     BOOL isPass = [validate evaluateWithObject: userID];
     return isPass;

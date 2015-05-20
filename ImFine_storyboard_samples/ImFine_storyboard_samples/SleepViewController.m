@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    // 수면의 시작과 종료시간 -> 테이블 뷰에서 1세트로 처리
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,4 +36,9 @@
 }
 */
 
+- (IBAction)cancleButton:(id)sender {
+}
+
+- (IBAction)saveButton:(id)sender {
+}
 @end

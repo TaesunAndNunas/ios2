@@ -10,7 +10,7 @@
 #import "MainTableViewCell.h"
 #import "MainModel.h"
 
-@interface MainViewController : UIViewController
+@interface MainViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
 - (IBAction)feedingButton:(id)sender;
 - (IBAction)pooButton:(id)sender;

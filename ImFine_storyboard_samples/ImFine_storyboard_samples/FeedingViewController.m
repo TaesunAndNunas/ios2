@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //디폴트시간 이벤트타임
+    //입력값 제이슨 처리
+    //세그멘티드 컨트롤 처리
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,5 +37,13 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)cancleButton:(id)sender {
+    
+}
+
+- (IBAction)saveButton:(id)sender {
+    
+}
 
 @end
