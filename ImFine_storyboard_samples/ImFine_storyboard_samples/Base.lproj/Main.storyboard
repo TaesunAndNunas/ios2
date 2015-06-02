@@ -185,21 +185,22 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GF-T6-J1D">
-                                <rect key="frame" x="156" y="476" width="52" height="30"/>
-                                <state key="normal" title="가입하기">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="registButton:" destination="bqR-Kq-6xL" eventType="touchUpInside" id="W6s-cj-Im8"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="아이 이름" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Esp-6f-dFI">
                                 <rect key="frame" x="80" y="278" width="57" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GF-T6-J1D">
+                                <rect key="frame" x="156" y="476" width="52" height="30"/>
+                                <state key="normal" title="가입하기">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="regist:" destination="bqR-Kq-6xL" eventType="touchUpInside" id="gUd-Wh-WIn"/>
+                                    <segue destination="Suu-le-fd2" kind="modal" id="3aX-4e-iaO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -247,9 +248,8 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ij-Co-3SP" userLabel="feedingButton">
-                                <rect key="frame" x="16" y="579" width="80" height="80"/>
-                                <color key="backgroundColor" red="0.98039215686274506" green="0.66666666666666663" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="milk2_white.png">
+                                <rect key="frame" x="279" y="579" width="80" height="80"/>
+                                <state key="normal" backgroundImage="feeding.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -257,29 +257,17 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vmp-vX-Ds5" userLabel="pooButton">
-                                <rect key="frame" x="104" y="579" width="80" height="80"/>
-                                <color key="backgroundColor" red="0.16862745098039217" green="0.73333333333333328" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="diaper2_white.png">
+                                <rect key="frame" x="191" y="579" width="80" height="80"/>
+                                <state key="normal" backgroundImage="poo.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="pooButton:" destination="Suu-le-fd2" eventType="touchUpInside" id="gco-ky-5tl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUs-la-tHQ" userLabel="sleepingButton">
-                                <rect key="frame" x="191" y="579" width="80" height="80"/>
-                                <color key="backgroundColor" red="0.94509803921568625" green="0.81176470588235294" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="sleep2_white.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="sleepingButton:" destination="Suu-le-fd2" eventType="touchUpInside" id="Ehw-Po-ZqD"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWE-GS-Iwc" userLabel="medicineButton">
-                                <rect key="frame" x="279" y="579" width="80" height="80"/>
-                                <color key="backgroundColor" red="0.96470588235294119" green="0.32941176470588235" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="medicine2_white.png">
+                                <rect key="frame" x="16" y="579" width="80" height="80"/>
+                                <state key="normal" backgroundImage="medicine.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -287,25 +275,34 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cc-Qu-XYu" userLabel="feedingLabel">
-                                <rect key="frame" x="16" y="638" width="80" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hem-1h-IhR" userLabel="sleepingLabel">
-                                <rect key="frame" x="191" y="638" width="80" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktk-pN-mlg" userLabel="medicineLabel">
                                 <rect key="frame" x="279" y="638" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktk-pN-mlg" userLabel="medicineLabel">
+                                <rect key="frame" x="16" y="638" width="80" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLV-wX-Zgb" userLabel="pooLabel">
-                                <rect key="frame" x="103" y="636" width="80" height="21"/>
+                                <rect key="frame" x="190" y="636" width="80" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUs-la-tHQ" userLabel="sleepingButton">
+                                <rect key="frame" x="104" y="579" width="80" height="80"/>
+                                <state key="normal" backgroundImage="sleep.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sleepingButton:" destination="Suu-le-fd2" eventType="touchUpInside" id="Ehw-Po-ZqD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hem-1h-IhR" userLabel="sleepingLabel">
+                                <rect key="frame" x="104" y="638" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -350,10 +347,10 @@
                         <outlet property="medicineLabel" destination="ktk-pN-mlg" id="Efr-YL-G28"/>
                         <outlet property="pooLabel" destination="KLV-wX-Zgb" id="pUG-gx-FdO"/>
                         <outlet property="sleepingLabel" destination="Hem-1h-IhR" id="40y-OA-mnT"/>
-                        <segue destination="4JQ-ie-6B0" kind="presentation" identifier="PooSegue" id="gIZ-wb-Nar"/>
-                        <segue destination="j5F-AL-Fkk" kind="presentation" identifier="MedicineSegue" id="gGQ-Op-EFo"/>
-                        <segue destination="C57-hb-Tu7" kind="presentation" identifier="SleepSegue" id="mml-ud-VEl"/>
-                        <segue destination="VZs-bm-aKH" kind="presentation" identifier="FeedingSegue" id="1b7-RK-Ze5"/>
+                        <segue destination="Cc9-s2-0MU" kind="presentation" identifier="PooSegue" id="gIZ-wb-Nar"/>
+                        <segue destination="3cT-rk-NrW" kind="presentation" identifier="MedicineSegue" id="gGQ-Op-EFo"/>
+                        <segue destination="iEM-xB-die" kind="presentation" identifier="SleepSegue" id="mml-ud-VEl"/>
+                        <segue destination="t8M-Vg-Tkb" kind="modal" identifier="FeedingSegue" id="1b7-RK-Ze5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pz4-Md-yQn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -480,7 +477,6 @@
                                 <state key="normal" title="저장하기"/>
                                 <connections>
                                     <action selector="saveButton:" destination="VZs-bm-aKH" eventType="touchUpInside" id="R15-Ff-UXu"/>
-                                    <segue destination="Suu-le-fd2" kind="show" id="gpT-zI-sdW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -499,7 +495,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pVK-zi-xXQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="208.5" y="589.5"/>
+            <point key="canvasLocation" x="208.5" y="1383.5"/>
         </scene>
         <!--Poo View Controller-->
         <scene sceneID="tfs-87-rrM">
@@ -581,7 +577,6 @@
                                 <state key="normal" title="저장하기"/>
                                 <connections>
                                     <action selector="saveButton:" destination="4JQ-ie-6B0" eventType="touchUpInside" id="Hz3-6E-bCV"/>
-                                    <segue destination="Suu-le-fd2" kind="show" id="kZ2-1l-N1f"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7mf-Ah-EnQ">
@@ -616,7 +611,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UwR-mf-MKQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1691.5" y="589.5"/>
+            <point key="canvasLocation" x="1691.5" y="1383.5"/>
         </scene>
         <!--Sleep View Controller-->
         <scene sceneID="sAk-pf-v79">
@@ -684,7 +679,6 @@
                                 <state key="normal" title="저장하기"/>
                                 <connections>
                                     <action selector="saveButton:" destination="C57-hb-Tu7" eventType="touchUpInside" id="UBs-O5-npG"/>
-                                    <segue destination="Suu-le-fd2" kind="show" id="YUx-0p-G8B"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=":" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hig-BF-8uj">
@@ -727,7 +721,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u8z-Q7-G6F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="705.5" y="589.5"/>
+            <point key="canvasLocation" x="705.5" y="1383.5"/>
         </scene>
         <!--Medicine View Controller-->
         <scene sceneID="wAA-QN-iZ7">
@@ -869,7 +863,6 @@
                                 <state key="normal" title="저장하기"/>
                                 <connections>
                                     <action selector="saveButton:" destination="j5F-AL-Fkk" eventType="touchUpInside" id="JYb-Da-WhX"/>
-                                    <segue destination="Suu-le-fd2" kind="show" id="uLZ-MC-z31"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -885,16 +878,89 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0bD-xO-5Wf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1207.5" y="589.5"/>
+            <point key="canvasLocation" x="1199.5" y="1383.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bww-Gs-Pul">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3cT-rk-NrW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="n3Q-Mq-hcT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="j5F-AL-Fkk" kind="relationship" relationship="rootViewController" id="bdf-dB-MvH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rYU-2e-AuI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1199.5" y="589.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9Gp-H7-07n">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cc9-s2-0MU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7C1-75-bCa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4JQ-ie-6B0" kind="relationship" relationship="rootViewController" id="AVf-x1-WYk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DNS-aD-P3b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1691.5" y="589.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="g3D-0J-r5g">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iEM-xB-die" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XDs-JV-uOZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="C57-hb-Tu7" kind="relationship" relationship="rootViewController" id="FfH-5a-i25"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="opJ-Jo-KO9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="705.5" y="589.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fNB-lL-toq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="t8M-Vg-Tkb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="L45-y2-DvJ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pMx-K4-Ht1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VZs-bm-aKH" kind="relationship" relationship="rootViewController" id="z4v-dP-RUK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SUm-JM-yjy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="208.5" y="589.5"/>
         </scene>
     </scenes>
     <resources>
-        <image name="diaper2_white.png" width="57" height="62"/>
-        <image name="medicine2_white.png" width="57" height="77"/>
-        <image name="milk2_white.png" width="49" height="65"/>
-        <image name="sleep2_white.png" width="57" height="102"/>
+        <image name="feeding.png" width="550" height="550"/>
+        <image name="medicine.png" width="550" height="550"/>
+        <image name="poo.png" width="550" height="550"/>
+        <image name="sleep.png" width="550" height="550"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uLZ-MC-z31"/>
+        <segue reference="3aX-4e-iaO"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -6,8 +6,15 @@
 	<dict>
 		<key>ImFime.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>2</integer>
+		</dict>
+		<key>ImFineWidget.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 		<key>ImFine_storyboard_samples.xcscheme</key>
 		<dict>
@@ -16,6 +23,8 @@
 		</dict>
 		<key>MainWidget.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
@@ -38,6 +47,11 @@
 			<true/>
 		</dict>
 		<key>DC2A55771AE43000002F7D0B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DCBAC8C21B1BB27C0076FCDA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

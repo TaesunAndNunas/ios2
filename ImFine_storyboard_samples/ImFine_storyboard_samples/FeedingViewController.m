@@ -39,11 +39,12 @@
 */
 
 - (IBAction)cancleButton:(id)sender {
-    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)saveButton:(id)sender {
-    
+    [self dismissViewControllerAnimated:YES completion:nil];
+
 }
 
 @end

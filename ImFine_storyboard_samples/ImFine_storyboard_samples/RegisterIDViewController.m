@@ -44,13 +44,13 @@
 
 
 // 아이디 유효판별 검사 메서드
--(BOOL) checkUserIDValid: (NSString*) userID {
-    
-    // 유효한 정규식인가???
-    NSPredicate* validate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", @"[A-Za-z0-9]*$"];
-    BOOL isPass = [validate evaluateWithObject: userID];
-    return isPass;
-
+//-(BOOL) checkUserIDValid: (NSString*) userID {
+//    
+//    // 유효한 정규식인가???
+//    NSPredicate* validate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", @"[A-Za-z0-9]*$"];
+//    BOOL isPass = [validate evaluateWithObject: userID];
+//    return isPass;
+//
 //    const char *tmp = [userID cStringUsingEncoding:NSUTF8StringEncoding];
 //    if (userID.length != strlen(tmp)) {
 //        return NO;
@@ -61,7 +61,7 @@
 //        return NO;
 //    }
 //    return YES;
-}
+//}
 
 
 - (IBAction)userSexSegmented:(UISegmentedControl*)sender {
@@ -96,17 +96,17 @@
         return NO;
     }
     
-    if (![self checkUserIDValid:userID]) {
-        self.errorLabel.text = @"아이디는 알파벳 소문자 또는 숫자의 조합으로 작성해 주세요";
-        self.errorLabel.textColor = [UIColor redColor];
-        return NO;
-    }
-    
-    if (![newModel checkUserIDDuplicated: userID]) {
-        self.errorLabel.text = @"중복된 아이디가 존재합니다.";
-        self.errorLabel.textColor = [UIColor redColor];
-        return NO;
-    }
+//    if (![self checkUserIDValid:userID]) {
+//        self.errorLabel.text = @"아이디는 알파벳 소문자 또는 숫자의 조합으로 작성해 주세요";
+//        self.errorLabel.textColor = [UIColor redColor];
+//        return NO;
+//    }
+//
+//    if (![newModel checkUserIDDuplicated: userID]) {
+//        self.errorLabel.text = @"중복된 아이디가 존재합니다.";
+//        self.errorLabel.textColor = [UIColor redColor];
+//        return NO;
+//    }
 
     // 비밀번호 관련 예외처리
     if([pw1 isEqualToString:@""]){
@@ -147,19 +147,19 @@
 }
 
 
-- (IBAction)registButton:(id)sender {
+- (IBAction)regist:(id)sender {
     
-        NSString *userID =    [self.userIDField text];
-        NSString *password =  [self.userPassword1Field text];
-        NSString *userName =  [self.userNameField text];
-        NSString *userBirth = [self.userBirthField text];
-    
+//        NSString *userID =    [self.userIDField text];
+//        NSString *password =  [self.userPassword1Field text];
+//        NSString *userName =  [self.userNameField text];
+//        NSString *userBirth = [self.userBirthField text];
+//
         if ([self checkSuccess]) {
-            [newModel successConnection:userID
-                                       :password
-                                       :userName
-                                       :userBirth
-                                       :_userSex];
+//            [newModel successConnection:userID
+//                                       :password
+//                                       :userName
+//                                       :userBirth
+//                                       :_userSex];
         }
     // else if 구현 및 생년월일 예외조건 구현
 }

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PooModel.h"
 
 @interface PooViewController : UIViewController
 

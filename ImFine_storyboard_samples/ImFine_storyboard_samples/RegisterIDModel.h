@@ -10,20 +10,20 @@
 #import "RegisterIDViewController.h"
 
 @interface RegisterIDModel : NSObject
-{
-    NSURL* newURL;
-    NSMutableURLRequest * newRequest;
-    NSData * resistData;
-}
-
-- (id) init;
-- (id) initWithURLWithPort:(NSString*)URL
-                      port:(NSString*)port;
--(void) successConnection:(NSString*)userID
-                         :(NSString*)password
-                         :(NSString*)userName
-                         :(NSString*)userBirth
-                         :(NSString*)userSex;
-- (BOOL) checkUserIDDuplicated:(NSString*)userID;
+//{
+//    NSURL* newURL;
+//    NSMutableURLRequest * newRequest;
+//    NSData * resistData;
+//}
+//
+//- (id) init;
+//- (id) initWithURLWithPort:(NSString*)URL
+//                      port:(NSString*)port;
+//-(void) successConnection:(NSString*)userID
+//                         :(NSString*)password
+//                         :(NSString*)userName
+//                         :(NSString*)userBirth
+//                         :(NSString*)userSex;
+//- (BOOL) checkUserIDDuplicated:(NSString*)userID;
 
 @end

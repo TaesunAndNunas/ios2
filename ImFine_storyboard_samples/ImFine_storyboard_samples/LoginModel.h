@@ -10,9 +10,9 @@
 #import <CommonCrypto/CommonDigest.h>
 
 @interface LoginModel : NSObject
-
-- (id) initWithURLwithPORT:(NSString*)URL port:(NSString*)port;
-- (void) login:(NSString*)userID password:(NSString*)userPassword;
-- (NSString*) sha1:(NSString*)input;
+//
+//- (id) initWithURLwithPORT:(NSString*)URL port:(NSString*)port;
+//- (void) login:(NSString*)userID password:(NSString*)userPassword;
+//- (NSString*) sha1:(NSString*)input;
 
 @end

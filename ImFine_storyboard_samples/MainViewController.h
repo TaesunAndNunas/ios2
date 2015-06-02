@@ -7,10 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+//#import <AFNetworking.h>
 #import "MainTableViewCell.h"
 #import "MainModel.h"
 
 @interface MainViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+//{
+//    NSInteger feedingCount;
+//    NSInteger pooCount;
+//    NSInteger sleepingCount;
+//    NSInteger medicineCount;
+//}
+
+-(void) feeding;
+-(void) poo;
+-(void) sleeping;
+-(void) medicine;
 
 - (IBAction)feedingButton:(id)sender;
 - (IBAction)pooButton:(id)sender;

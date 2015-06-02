@@ -20,6 +20,6 @@
 @property (strong, nonatomic)          NSString* userSex;
 @property (strong, nonatomic) IBOutlet UILabel *errorLabel;
 
-- (IBAction)registButton:(id)sender;
+- (IBAction)regist:(id)sender;
 
 @end
